@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emerson Jiménez — Baseball Performance & Analytics</title>
+<meta name="description" content="Strength & Conditioning Coach and baseball performance analyst. Biomechanics + Statcast analytics, EP-TSP framework.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0B1B33;
+    --gold: #D4A53A;
+    --off-white: #F5F3EC;
+    --slate: #4A5568;
+    --rule: #D8D3C4;
+    --red: #B0453D;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--off-white);
+    color: var(--navy);
+    font-family: 'Lora', serif;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, .display {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  a { color: inherit; }
+
+  /* ---------- Header ---------- */
+  header {
+    padding: 32px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  header .wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .wordmark {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    letter-spacing: 0.01em;
+  }
+  nav a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--slate);
+    margin-left: 28px;
+    transition: color 0.15s ease;
+  }
+  nav a:hover { color: var(--gold); }
+  nav a:first-child { margin-left: 0; }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    padding: 76px 0 64px;
+  }
+  .hero h1 {
+    font-size: clamp(28px, 4vw, 38px);
+    font-weight: 600;
+    line-height: 1.32;
+    max-width: 620px;
+    letter-spacing: -0.01em;
+  }
+  .hero .role {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    color: var(--slate);
+    font-size: 17px;
+    margin-top: 18px;
+    max-width: 520px;
+  }
+  .hero-facts {
+    margin-top: 36px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px 44px;
+  }
+  .hero-fact {
+    font-family: 'Poppins', sans-serif;
+  }
+  .hero-fact .n {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--navy);
+    display: block;
+  }
+  .hero-fact .l {
+    font-size: 13px;
+    color: var(--slate);
+    display: block;
+    margin-top: 2px;
+  }
+
+  /* ---------- Section headings ---------- */
+  section {
+    padding: 56px 0;
+    border-top: 1px solid var(--rule);
+  }
+  .section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .section-head h2 {
+    font-size: 22px;
+    font-weight: 600;
+  }
+  .section-head .note {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    color: var(--slate);
+    font-size: 14px;
+  }
+
+  /* ---------- Leaderboard ---------- */
+  .board-row {
+    display: grid;
+    grid-template-columns: 34px 1fr auto;
+    gap: 6px 18px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--rule);
+    align-items: start;
+  }
+  .board-row:last-child { border-bottom: none; }
+  .board-rank {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--gold);
+    padding-top: 2px;
+  }
+  .board-main a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 16.5px;
+    text-decoration: none;
+    color: var(--navy);
+  }
+  .board-main a:hover { color: var(--gold); }
+  .board-finding {
+    font-family: 'Lora', serif;
+    color: var(--slate);
+    font-size: 15px;
+    margin-top: 6px;
+    max-width: 480px;
+  }
+  .board-tag {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--slate);
+    white-space: nowrap;
+    padding-top: 3px;
+  }
+  .board-row.exception .board-rank { color: var(--red); }
+
+  /* ---------- Principles ---------- */
+  .principles {
+    display: grid;
+    gap: 22px;
+  }
+  .principle {
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    gap: 16px;
+  }
+  .principle .mark {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: var(--gold);
+    font-size: 17px;
+  }
+  .principle p {
+    font-size: 15.5px;
+    color: var(--navy);
+    max-width: 560px;
+  }
+  .principle .sub {
+    color: var(--slate);
+    font-size: 14px;
+    margin-top: 3px;
+  }
+
+  /* ---------- About ---------- */
+  .about p {
+    max-width: 620px;
+    font-size: 16px;
+    color: var(--navy);
+  }
+  .about p + p { margin-top: 16px; }
+
+  /* ---------- Footer / contact ---------- */
+  footer {
+    padding: 48px 0 64px;
+    border-top: 1px solid var(--rule);
+  }
+  .contact-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 28px;
+    margin-bottom: 24px;
+  }
+  .contact-row a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 14.5px;
+    text-decoration: none;
+    border-bottom: 1px solid var(--gold);
+    padding-bottom: 2px;
+  }
+  .contact-row a:hover { color: var(--gold); }
+  footer .fine {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--slate);
+  }
+
+  @media (max-width: 560px) {
+    .board-row { grid-template-columns: 24px 1fr; }
+    .board-tag { grid-column: 2; padding-top: 0; }
+    nav a { margin-left: 16px; font-size: 13px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="wordmark">Emerson Jiménez</div>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#method">Method</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero wrap">
+  <h1>A raw physical tool usually predicts less than a specific skill built on top of it — except when it doesn't. I test which, in public.</h1>
+  <p class="role">Strength & Conditioning Coach and baseball performance analyst, building EP-TSP — a biomechanics and Statcast analytics framework.</p>
+  <div class="hero-facts">
+    <div class="hero-fact"><span class="n">28</span><span class="l">Published repos</span></div>
+    <div class="hero-fact"><span class="n">100%</span><span class="l">Public Statcast data</span></div>
+    <div class="hero-fact"><span class="n">EN / ES</span><span class="l">Bilingual documentation</span></div>
+    <div class="hero-fact"><span class="n">15+ yrs</span><span class="l">MLB affiliate academies</span></div>
+  </div>
+</div>
+
+<section id="work">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Featured work</h2>
+      <span class="note">Ranked the way Baseball Savant would rank them</span>
+    </div>
+
+    <div class="board-row exception">
+      <div class="board-rank">1</div>
+      <div class="board-main">
+        <a href="https://github.com/ejimenezperformance/ep-tsp-central-pattern" target="_blank">ep-tsp-central-pattern</a>
+        <p class="board-finding">Re-tested the portfolio's own core thesis against the original datasets of three prior projects. Hitting broke the pattern — bat speed beats the "smarter" metric, and the repo documents exactly why.</p>
+      </div>
+      <div class="board-tag">Cross-domain</div>
+    </div>
+
+    <div class="board-row">
+      <div class="board-rank">2</div>
+      <div class="board-main">
+        <a href="https://github.com/ejimenezperformance/ep-pitch-recognition" target="_blank">ep-pitch-recognition</a>
+        <p class="board-finding">Hitters' swing timing defaults to fastball speed — early-swing rate jumps up to 45x against off-speed pitches, league-wide.</p>
+      </div>
+      <div class="board-tag">Hitting</div>
+    </div>
+
+    <div class="board-row">
+      <div class="board-rank">3</div>
+      <div class="board-main">
+        <a href="https://github.com/ejimenezperformance/ep-defense-intelligence" target="_blank">ep-defense-intelligence</a>
+        <p class="board-finding">First-step reaction and burst predict outfield range nearly twice as well as top-end sprint speed does.</p>
+      </div>
+      <div class="board-tag">Defense</div>
+    </div>
+
+    <div class="board-row">
+      <div class="board-rank">4</div>
+      <div class="board-main">
+        <a href="https://github.com/ejimenezperformance/tj-recovery-trajectory" target="_blank">tj-recovery-trajectory</a>
+        <p class="board-finding">Velocity returns to 99–102% of pre-surgery levels after Tommy John. Arm slot usually doesn't come back the same.</p>
+      </div>
+      <div class="board-tag">Pitching</div>
+    </div>
+
+    <div class="board-row">
+      <div class="board-rank">5</div>
+      <div class="board-main">
+        <a href="https://github.com/ejimenezperformance/elbow-injury-risk-validation" target="_blank">elbow-injury-risk-validation</a>
+        <p class="board-finding">Arm angle alone doesn't separate 165 pitchers by Tommy John history. A negative result, published because it's true.</p>
+      </div>
+      <div class="board-tag">Pitching</div>
+    </div>
+  </div>
+</section>
+
+<section id="method">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>How this work is done</h2>
+    </div>
+    <div class="principles">
+      <div class="principle">
+        <div class="mark">01</div>
+        <div>
+          <p>Public data only.</p>
+          <p class="sub">Every project runs on Baseball Savant / Statcast exports anyone can download — no proprietary feeds, nothing that can't be checked.</p>
+        </div>
+      </div>
+      <div class="principle">
+        <div class="mark">02</div>
+        <div>
+          <p>Negative results get published, not buried.</p>
+          <p class="sub">If a metric doesn't predict what it's supposed to, that's the headline — see the elbow-injury and swing-plane repos.</p>
+        </div>
+      </div>
+      <div class="principle">
+        <div class="mark">03</div>
+        <div>
+          <p>Corrections happen in the open.</p>
+          <p class="sub">A coefficient-scaling bug in an early hitting model was caught, fixed, and documented — then the fix was re-verified across every repo that had cited the old number.</p>
+        </div>
+      </div>
+      <div class="principle">
+        <div class="mark">04</div>
+        <div>
+          <p>Every repo is reproducible.</p>
+          <p class="sub">Data, scripts, and a one-command way to regenerate every chart — bilingual, in English and Spanish.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>About</h2>
+    </div>
+    <div class="about">
+      <p>I've spent 15+ years as a Strength & Conditioning Coach across MLB affiliate academies (Pittsburgh Pirates DR Academy), LMB (Acereros de Monclova), and LVBP (Cardenales de Lara). That background is the reason EP-TSP exists: most public baseball analytics stops at the statistic, and most performance coaching stops at the movement. I build the bridge between them.</p>
+      <p>I'm a SABR member and a participant in the 2026 MLB Pipeline Player Development & Analytics Cohort, currently based in South Florida.</p>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="contact-row">
+      <a href="https://linkedin.com/in/emerson-jiménez-94637392" target="_blank">LinkedIn</a>
+      <a href="https://github.com/ejimenezperformance" target="_blank">GitHub</a>
+      <a href="https://instagram.com/emersonperformance" target="_blank">Instagram</a>
+      <a href="mailto:hello@emersonperformance.com">Email</a>
+    </div>
+    <p class="fine">EP-TSP framework and design © Emerson Performance. Statcast / Baseball Savant data used for non-commercial analysis.</p>
+  </div>
+</footer>
+
+</body>
+</html>
