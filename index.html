@@ -212,6 +212,53 @@
   }
   .board-row.exception .board-rank { color: var(--red); }
 
+
+  /* ---------- Featured app ---------- */
+  .app-card {
+    background: var(--navy);
+    color: var(--off-white);
+    border-radius: 10px;
+    border-bottom: 4px solid var(--gold);
+    padding: 28px 30px;
+  }
+  .app-card .kicker {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--gold);
+  }
+  .app-card h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 6px 0 10px;
+  }
+  .app-card p {
+    font-size: 15.5px;
+    color: #D9D6CC;
+    max-width: 600px;
+  }
+  .app-card ul {
+    list-style: none;
+    margin: 14px 0 22px;
+    font-size: 15px;
+    color: #D9D6CC;
+  }
+  .app-card li::before { content: "▪ "; color: var(--gold); }
+  .app-links { display: flex; flex-wrap: wrap; gap: 12px 16px; }
+  .app-links a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+  }
+  .app-links .primary { background: var(--gold); color: var(--navy); }
+  .app-links .primary:hover { background: #E2B85A; }
+  .app-links .secondary { border: 1px solid #5A6A82; color: var(--off-white); }
+  .app-links .secondary:hover { border-color: var(--gold); color: var(--gold); }
+
   /* ---------- Principles ---------- */
   .principles {
     display: grid;
@@ -287,6 +334,7 @@
   <div class="wrap">
     <div class="wordmark">Emerson Jiménez</div>
     <nav>
+      <a href="#app">App</a>
       <a href="#work">Work</a>
       <a href="#method">Method</a>
       <a href="#about">About</a>
@@ -305,6 +353,25 @@
     <div class="hero-fact"><span class="n">15+ yrs</span><span class="l">MLB affiliate academies</span></div>
   </div>
 </div>
+
+<section id="app">
+  <div class="wrap">
+    <div class="app-card">
+      <div class="kicker">LIVE APP</div>
+      <h3>EP Player Development Hub</h3>
+      <p>From Statcast data to a diagnosis and a 12-week offseason plan — for any MLB hitter or pitcher, in seconds.</p>
+      <ul>
+        <li>Percentile profile vs. MLB (pitchers compared within their role)</li>
+        <li>2024–2026 trend with alerts calibrated on real league-wide year-to-year change</li>
+        <li>Rule-based offseason plan: every block triggered by a confirmed data finding, with a monitoring metric</li>
+      </ul>
+      <div class="app-links">
+        <a class="primary" href="https://ep-player-development.streamlit.app" target="_blank">Open the app →</a>
+        <a class="secondary" href="https://github.com/ejimenezperformance/ep-player-development-hub" target="_blank">Code &amp; method</a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section id="work">
   <div class="wrap">
